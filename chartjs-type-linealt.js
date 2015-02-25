@@ -92,7 +92,7 @@ define('chartjs.type.linealt', ['chartjs'], function(Chart) {
 
                     ctx.save();
                     ctx.translate(xPos, (isRotated) ? this.endPoint + 12 : this.endPoint + 8);
-                    ctx.rotate(toRadians(this.xLabelRotation) * -1);
+                    ctx.rotate(this.labelsRotate !== undefined ? this.labelsRotate : (toRadians(this.xLabelRotation) * -1));
 
                     ctx.textAlign = (isRotated) ? "right" : "center";
                     ctx.textBaseline = (isRotated) ? "middle" : "top";
