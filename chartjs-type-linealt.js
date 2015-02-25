@@ -112,6 +112,7 @@ define('chartjs.type.linealt', ['chartjs'], function(Chart) {
             //ensure the new option is part of the options
             //======================================================
             this.options.labelsFilter = data.labelsFilter || null;
+            this.options.labelsRotate = data.labelsRotate || undefined;
             Chart.types.Line.prototype.initialize.apply(this, arguments);
 
 
@@ -139,6 +140,7 @@ define('chartjs.type.linealt', ['chartjs'], function(Chart) {
                 //pass this new options to the scale object
                 //======================================================
                 labelsFilter: this.options.labelsFilter,
+                labelsRotate: this.options.labelsRotate,
                 fontStyle: this.options.scaleFontStyle,
                 fontFamily: this.options.scaleFontFamily,
                 valuesCount: labels.length,
